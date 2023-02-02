@@ -6,7 +6,7 @@ export default function Form() {
 
     const registrarUsuario = async () => {
         try {
-            await axios.post("https://softjobsbackend-production.up.railway.app/usuarios", {usuario})
+            await axios.post(process.env.REACT_APP_BASE_URL, {usuario})
             Swal.fire({
                 icon: 'success',
                 title: 'Usuario agregado con éxito'    

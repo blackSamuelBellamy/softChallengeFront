@@ -14,7 +14,7 @@ export default function RegistroForm() {
   };
 
   const registrarUsuario = async () => {
-    const urlServer = "https://softjobsbackend-production.up.railway.app";
+    const urlServer = process.env.REACT_APP_BASE_URL;
     const endpoint = "/usuarios";
     try {
       await axios.post(urlServer + endpoint, usuario);

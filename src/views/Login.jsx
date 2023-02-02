@@ -17,7 +17,7 @@ export default function RegistroForm() {
   };
 
   const iniciarSesion = async () => {
-    const urlServer = "https://softjobsbackend-production.up.railway.app";
+    const urlServer = process.env.REACT_APP_BASE_URL;
     const endpoint = "/login";
     const { email, password } = usuario;
     try {

@@ -9,7 +9,7 @@ export default function Home() {
   const [usuario, setUsuarioLocal] = useState({});
 
   const getUsuarioData = async () => {
-    const urlServer = "https://softjobsbackend-production.up.railway.app";
+    const urlServer = process.env.REACT_APP_BASE_URL;
     const endpoint = "/usuarios";
     const token = localStorage.getItem("token");
 
